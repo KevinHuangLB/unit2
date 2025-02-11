@@ -2,15 +2,14 @@
 // Feb. 10
 // 2-3
 
-int x;
-int y;
+int x;                     
 
 void setup(){
   size(600,600);
 } //END
 
 void draw(){
-  ellipse(x,y,200,200);
-  x += 1;
-  y += 1;
-} // END 
+  background(255);
+  ellipse(x,200,200);
+  
+// END 
