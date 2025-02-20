@@ -19,6 +19,11 @@ void setup() { // =======================================================
   count = 0;
   startingPosition = 0;
   buildingDistanceCount = 0;
+  ran1 = int(random(60,225));
+  ran2 = int(random(60,225));
+  ran3 = int(random(60,225));
+  ran4 = int(random(60,225));
+  ran5 = int(random(60,225));
 } // END SETUP +====================================-=-= -=-= =- =- =- =- =- =- -= 
 
 void draw(){ // -----------------------------------------------------------
@@ -37,29 +42,33 @@ void draw(){ // -----------------------------------------------------------
   //background buildings
   fill(3,255,93);
   strokeWeight(2);
-  
+  fill(220);
   if (buildingDistanceCount < 1){
-    ran1 = int(random(60,225));
-    ran2 = int(random(60,225));
-    ran3 = int(random(60,225));
-    ran4 = int(random(60,225));
     ran5 = int(random(60,225));
-  rect(bg1,ran1,250,600);
-  rect(bg2,ran2,250,600);
-  rect(bg3,ran3,200,600);
-  rect(bg4,ran4,250,600);
   rect(bg5,ran5,250,600);
-  buildingDistanceCount = 0;
+  buildingDistanceCount = 1000;
   }
-    // NOTE FOR TOMORROW _                  -- -- - - - 
-    // ADD POSSIBLY 10 buildings so it can flip through them
-    // flip the randoms
-    // possibly if statement with another counter
-    // can flip the buildings' random
-    // so it can random generate
-    // while there is always one showing
-  
-  
+    if (buildingDistanceCount == 200){
+    ran1 = int(random(60,225));
+  rect(bg1,ran1,250,600);
+
+  }
+    if (buildingDistanceCount == 400){
+    ran2 = int(random(60,225));
+  rect(bg2,ran2,250,600);
+  }
+    if (buildingDistanceCount == 600){
+    ran3 = int(random(60,225));
+  rect(bg3,ran3,250,600);
+  }
+    if (buildingDistanceCount == 800){
+    ran4 = int(random(60,225));
+  rect(bg4,ran4,250,600);
+  }
+      if (buildingDistanceCount == 1000){
+    ran5 = int(random(60,225));
+  rect(bg5,ran5,250,600);
+  }
   
   rect(bg1,ran1,200,600);
   rect(bg2,ran2,200,600);
